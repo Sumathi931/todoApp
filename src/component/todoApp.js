@@ -69,7 +69,7 @@ const TodoApp = () => {
         <input
           type="text"
           value={input}
-          placeholder="Enter your task"
+          placeholder="What's your plan today?"
           onChange={(e) => {
             setInput(e.target.value);
             if (addError) setAddError("");
@@ -86,6 +86,7 @@ const TodoApp = () => {
           {editIndex === index ? (
             <>
               <input
+                className="edit-input"
                 type="text"
                 value={editValue}
                 onChange={(e) => {

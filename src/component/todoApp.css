@@ -1,30 +1,30 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: rgb(210, 250, 101);
+  font-family: "Poppins", sans-serif;
+  background-color: #0d1b2a;
 }
 
 .todobody {
   max-width: 400px;
   margin: 30px auto;
-  background-color: white;
+  background-color: #1b263b;
   padding: 30px;
   border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
 }
 
 .todobody h2 {
   margin-top: 30px;
-  margin-bottom: 17px; /* Decreased from default */
-  color: #444;
+  margin-bottom: 17px;
+  color: #e0e1dd;
 }
-
 
 .todohead {
   text-align: center;
-  color: #333;
+  color: #e0e1dd;
   margin-top: 10px;
   margin-bottom: 40px;
+  font-size: 1.8rem;
 }
 
 .input-container {
@@ -38,38 +38,70 @@ body {
   padding: 10px;
   font-size: 16px;
   border-radius: 6px;
-  border: 1px solid #d4caca;
+  border: 1px solid #778da9;
+  background-color: #0d1b2a;
+  color: #e0e1dd;
   flex: 1;
+  transition: border 0.3s;
 }
 
-.input-container button {
-  padding: 10px;
-  background-color: rgb(222, 248, 149);
-  color: black;
+.edit-input {
+  padding: 8px 12px;
+  font-size: 15px;
+  border-radius: 6px;
+  border: 1px solid #778da9;
+  background-color: #0d1b2a;
+  color: #e0e1dd;
+  font-family: "Poppins", sans-serif;
+  width: 50%;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.edit-input:focus {
   border: none;
-  font-size: 16px;
+  outline: none;
+  box-shadow: 0 0 0 2px #00b4d8;
+}
+
+.input-container input:focus {
+  border: none;
+  outline: none;
+  box-shadow: 0 0 0 2px #00b4d8;
+}
+
+.input-container button,
+.button-group button {
+  padding: 10px 14px;
+  background-color: #00b4d8;
+  color: #fff;
+  border: none;
+  font-size: 13px;
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.input-container button:hover {
-  background-color: #c2f01e;
+.input-container button:hover,
+.button-group button:hover {
+  background-color: #0096c7;
 }
 
-.todo-item h3 {
-  color: #4f5343;
-}
 .todo-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 0;
-  border-bottom: 1px solid #ccc;
+  padding: 8px 0;
+  border-bottom: 1px solid #415a77;
 }
 
 .todo-item:last-child {
   border-bottom: none;
+}
+
+.todo-item h3 {
+  color: #e0e1dd;
+  margin: 0;
+  font-size: 1rem;
 }
 
 .button-group {
@@ -77,24 +109,9 @@ body {
   gap: 10px;
 }
 
-.button-group button {
-  padding: 8px;
-  background-color: rgb(222, 248, 149);
-  color: black;
-  border: none;
-  font-size: 14px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.button-group button:hover {
-  background-color: #c2f01e;
-}
-
 .error-message {
   padding-left: 6px;
-  color: red;
+  color: #ff6b6b;
   font-size: 14px;
   margin-top: 10px;
 }
